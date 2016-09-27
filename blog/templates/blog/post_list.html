@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Django - Llistat de Noticies{% endblock title %}
+
+{% block content %}
+<h1>Llistat de posts</h1>
+{% for noticia in posts %}
+	<div>
+		<p>Publicat el {{noticia.publish_date}}</p>
+		<p>Publicat el {{noticia.created_date}}</p>
+		<h2>{{noticia.title}}</h2>
+		<p>{{noticia.text}}</p>
+		<p>Creat per {{noticia.author}}</p>
+		</div>
+{% endfor %}
+{% endblock content %}
+
+
